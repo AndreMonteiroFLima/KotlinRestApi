@@ -3,8 +3,7 @@ package br.com.zup.dto
 import br.com.zup.entities.Vehicle
 import br.com.zup.services.validation.VehicleValidData
 import com.fasterxml.jackson.annotation.JsonInclude
-import javax.validation.constraints.NotBlank
-import javax.validation.constraints.Null
+import jakarta.validation.constraints.NotBlank
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @VehicleValidData

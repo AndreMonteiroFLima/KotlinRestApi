@@ -2,17 +2,13 @@ package br.com.zup.services
 
 import br.com.zup.dto.UserDTO
 import br.com.zup.dto.VehicleDTO
-import br.com.zup.dto.VehicleDTO.Companion.fromEntity
 import br.com.zup.entities.User
-import br.com.zup.entities.Vehicle
 import br.com.zup.repositories.UserRepository
 import br.com.zup.services.exceptions.DataErrorException
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import java.util.*
 import java.util.function.Consumer
-import java.util.stream.Collectors
 
 @Service
 class UserService(

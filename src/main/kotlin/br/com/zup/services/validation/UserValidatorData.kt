@@ -3,9 +3,9 @@ package br.com.zup.services.validation
 import br.com.zup.controllers.exceptions.FieldMessage
 import br.com.zup.dto.UserDTO
 import br.com.zup.repositories.UserRepository
+import jakarta.validation.ConstraintValidator
+import jakarta.validation.ConstraintValidatorContext
 import org.springframework.beans.factory.annotation.Autowired
-import javax.validation.ConstraintValidator
-import javax.validation.ConstraintValidatorContext
 
 class UserValidatorData : ConstraintValidator<UserValidData?, UserDTO> {
     @Autowired

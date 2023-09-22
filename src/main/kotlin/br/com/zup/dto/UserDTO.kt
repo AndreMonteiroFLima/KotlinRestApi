@@ -1,13 +1,13 @@
 package br.com.zup.dto
 
 import br.com.zup.entities.User
-import br.com.zup.entities.Vehicle
 import br.com.zup.services.validation.UserValidData
 import com.fasterxml.jackson.annotation.JsonFormat
+import jakarta.validation.constraints.Email
+import jakarta.validation.constraints.NotBlank
 import org.hibernate.validator.constraints.br.CPF
 import java.util.*
-import javax.validation.constraints.Email
-import javax.validation.constraints.NotBlank
+
 
 @UserValidData
 class UserDTO (

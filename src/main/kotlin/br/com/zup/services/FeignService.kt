@@ -25,7 +25,7 @@ class FeignService(
         )
     }
 
-    fun jsonToFIPEObject(json: String): FIPEObject {
+    fun jsonToFIPEObject(json: String?): FIPEObject {
         val mapper = ObjectMapper()
         return try {
             mapper.readValue(json, FIPEObject::class.java)
