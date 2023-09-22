@@ -29,7 +29,7 @@ class UserService(
             val day = cal[Calendar.DAY_OF_WEEK]
             val obj = feignService.getInformations(vehicle)
             vehicle.price = obj.value
-            vehicle.isRotation = feignService.tryRotation(day, vehicle.rotKey)
+            vehicle.isRotation = feignService.tryRotation(day, vehicle.rotKey!!)
         })
         return UserDTO.fromEntity(user, vehicles)
     }

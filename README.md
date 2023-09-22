@@ -1,10 +1,10 @@
-# Dezafio
+# DeZafio Kotlin
 
 [![Security Pipeline](https://github.com/GuillaumeFalourd/dezafio-kotlin/actions/workflows/security_pipeline.yml/badge.svg)](https://github.com/GuillaumeFalourd/dezafio-kotlin/actions/workflows/security_pipeline.yml)
 
 ## How to use?
 
-Run the application on the `VManagementApplication.kt` class.
+Run the application on the `VManagementApplication.kt` class or executing the command line `mvn spring-boot:run` on the repository root.
 
 ### Services
 

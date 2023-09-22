@@ -14,9 +14,9 @@ data class VehicleDTO (
     var model: String,
     @NotBlank
     var yearAndFuel: String,
-    var rotKey: Int,
-    var isRotation: Boolean = false,
-    var price: String
+    var rotKey: Int?,
+    var isRotation: Boolean? = false,
+    var price: String?
 ) {
     companion object {
         fun fromEntity(entity: Vehicle): VehicleDTO {
