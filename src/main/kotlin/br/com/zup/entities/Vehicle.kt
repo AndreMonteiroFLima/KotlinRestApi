@@ -1,7 +1,6 @@
 package br.com.zup.entities
 
-import java.util.*
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 @Table(name = "tb_vehicle")

@@ -2,7 +2,7 @@ package br.com.zup.entities
 
 import com.fasterxml.jackson.annotation.JsonFormat
 import java.util.*
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 @Table(name = "tb_user")

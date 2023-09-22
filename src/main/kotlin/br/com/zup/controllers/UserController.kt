@@ -2,17 +2,17 @@ package br.com.zup.controllers
 
 import br.com.zup.dto.UserDTO
 import br.com.zup.services.UserService
-import org.springframework.beans.factory.annotation.Autowired
+import jakarta.validation.Valid
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder
-import javax.validation.Valid
 
 @RestController
 @RequestMapping(value = ["/users"])
 class UserController(
     val userService: UserService
 ) {
+
     @GetMapping(value = ["/{cpf}"])
     fun getUser(@PathVariable cpf: String): ResponseEntity<UserDTO> {
         return ResponseEntity.ok().body(userService.getUser(cpf))

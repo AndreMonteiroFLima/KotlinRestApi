@@ -3,9 +3,8 @@ package br.com.zup.services.validation
 import br.com.zup.controllers.exceptions.FieldMessage
 import br.com.zup.dto.VehicleDTO
 import br.com.zup.services.feign.FIPEClient
-import org.springframework.beans.factory.annotation.Autowired
-import javax.validation.ConstraintValidator
-import javax.validation.ConstraintValidatorContext
+import jakarta.validation.ConstraintValidator
+import jakarta.validation.ConstraintValidatorContext
 
 class VehicleValidatorData(
     val fipe: FIPEClient
