@@ -1,0 +1,21 @@
+version: 1.0
+configuration:
+  has_webserver: true
+  ide_config:
+    default_open_files:
+      - VehicleRegister/src/main/java/br/com/zup/controllers/UserController.java
+      - VehicleRegister/src/main/java/br/com/zup/controllers/VehicleController.java
+      - VehicleRegister/src/main/java/br/com/zup/DTO/UserDTO.java
+      - VehicleRegister/src/main/java/br/com/zup/DTO/VehicleDTO.java
+      - VehicleRegister/src/main/java/br/com/zup/entities/User.java
+      - VehicleRegister/src/main/java/br/com/zup/entities/Vehicle.java
+      - VehicleRegister/src/main/java/br/com/zup/repositories/VehicleRepository.java
+      - VehicleRegister/src/main/java/br/com/zup/repositories/UserRepository.java
+      - VehicleRegister/src/main/java/br/com/zup/services/FeignService.java
+      - VehicleRegister/src/main/java/br/com/zup/services/UserService.java
+      - VehicleRegister/src/main/java/br/com/zup/services/VehicleService.java
+      - VehicleRegister/src/main/java/br/com/zup/VManagementApplication.java
+    project_menu:
+      run: "cd VehicleRegister; mvn clean spring-boot:run"
+      install: "cd VehicleRegister; mvn clean install"
+      test: "cd VehicleRegister; mvn clean test; cat target/customReports/result.txt"
