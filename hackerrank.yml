@@ -3,18 +3,18 @@ configuration:
   has_webserver: true
   ide_config:
     default_open_files:
-      - VehicleRegister/src/main/java/br/com/zup/controllers/UserController.java
-      - VehicleRegister/src/main/java/br/com/zup/controllers/VehicleController.java
-      - VehicleRegister/src/main/java/br/com/zup/DTO/UserDTO.java
-      - VehicleRegister/src/main/java/br/com/zup/DTO/VehicleDTO.java
-      - VehicleRegister/src/main/java/br/com/zup/entities/User.java
-      - VehicleRegister/src/main/java/br/com/zup/entities/Vehicle.java
-      - VehicleRegister/src/main/java/br/com/zup/repositories/VehicleRepository.java
-      - VehicleRegister/src/main/java/br/com/zup/repositories/UserRepository.java
-      - VehicleRegister/src/main/java/br/com/zup/services/FeignService.java
-      - VehicleRegister/src/main/java/br/com/zup/services/UserService.java
-      - VehicleRegister/src/main/java/br/com/zup/services/VehicleService.java
-      - VehicleRegister/src/main/java/br/com/zup/VManagementApplication.java
+      - VehicleRegister/src/main/kotlin/br/com/zup/controllers/UserController.kt
+      - VehicleRegister/src/main/kotlin/br/com/zup/controllers/VehicleController.kt
+      - VehicleRegister/src/main/kotlin/br/com/zup/DTO/UserDTO.kt
+      - VehicleRegister/src/main/kotlin/br/com/zup/DTO/VehicleDTO.kt
+      - VehicleRegister/src/main/kotlin/br/com/zup/entities/User.kt
+      - VehicleRegister/src/main/kotlin/br/com/zup/entities/Vehicle.kt
+      - VehicleRegister/src/main/kotlin/br/com/zup/repositories/VehicleRepository.kt
+      - VehicleRegister/src/main/kotlin/br/com/zup/repositories/UserRepository.kt
+      - VehicleRegister/src/main/kotlin/br/com/zup/services/FeignService.kt
+      - VehicleRegister/src/main/kotlin/br/com/zup/services/UserService.kt
+      - VehicleRegister/src/main/kotlin/br/com/zup/services/VehicleService.kt
+      - VehicleRegister/src/main/kotlin/br/com/zup/VManagementApplication.kt
     project_menu:
       run: "cd VehicleRegister; mvn clean spring-boot:run"
       install: "cd VehicleRegister; mvn clean install"
