@@ -6,13 +6,15 @@
 
 Run the application on the `VManagementApplication.kt` class or executing the command line `mvn spring-boot:run` on the repository root.
 
+Other option is to use Docker: `docker-compose up --build`
+
 ### Services
 
 You can import this [Postman Collection](https://www.getpostman.com/collections/0a95939f289339e039ca) to test the API locally.
 
 #### Add User
 
-**POST:** `http://localhost:8000/users` with body:
+**POST:** `http://localhost:8080/users` with body:
 
 ```json
 {
@@ -25,7 +27,7 @@ You can import this [Postman Collection](https://www.getpostman.com/collections/
 
 #### Get User by CPF
 
-**GET:** `http://localhost:8000/users/{cpf}` will return:
+**GET:** `http://localhost:8080/users/{cpf}` will return:
 
 ```json
 {
@@ -51,7 +53,7 @@ You can import this [Postman Collection](https://www.getpostman.com/collections/
 
 #### Get Vehicles by CPF
 
-**GET:** `http://localhost:8000/vehicles/{cpf}` will return:
+**GET:** `http://localhost:8080/vehicles/{cpf}` will return:
 
 ```json
 [
