@@ -34,10 +34,7 @@ class FeignService(
         }
     }
 
-    fun tryRotation(day: Int, rotKey: Int): Boolean {
-        val auxDay: Int
-        auxDay =
-            if (rotKey < 2) Calendar.MONDAY else if (rotKey < 4) Calendar.TUESDAY else if (rotKey < 6) Calendar.WEDNESDAY else if (rotKey < 8) Calendar.THURSDAY else Calendar.FRIDAY
-        return auxDay == day
+    fun tryRotation(): Boolean {
+        return false
     }
 }

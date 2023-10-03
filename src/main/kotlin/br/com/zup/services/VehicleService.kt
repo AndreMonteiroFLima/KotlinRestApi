@@ -40,15 +40,10 @@ class VehicleService(
         }
         vehicles.forEach(Consumer { vehicle: VehicleDTO ->
             val obj = feignService.getInformations(vehicle)
-            val cal = Calendar.getInstance()
-            cal.time = Date()
-            val day = cal[Calendar.DAY_OF_WEEK]
             vehicle.brand = obj.brand
             vehicle.model = obj.model
             vehicle.price = obj.value
-            vehicle.isRotation = feignService.tryRotation(
-                day, vehicle.yearAndFuel.substring(3, 4).toInt()
-            )
+            vehicle.isRotation = feignService.tryRotation()
         })
         return vehicles
     }
