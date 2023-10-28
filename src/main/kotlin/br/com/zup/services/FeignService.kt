@@ -35,6 +35,7 @@ class FeignService(
     }
 
     fun tryRotation(): Boolean {
+        println("Rotation False")
         return false
     }
 }

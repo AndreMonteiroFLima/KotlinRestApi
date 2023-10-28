@@ -41,7 +41,7 @@ You can import this [Postman Collection](https://www.getpostman.com/collections/
 
 #### Add Vehicles
 
-**POST:** `http://localhost:8000/vehicles/{cpf}` with body:
+**POST:** `http://localhost:8080/vehicles/{cpf}` with body:
 
 ```json
 {

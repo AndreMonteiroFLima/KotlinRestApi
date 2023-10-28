@@ -19,7 +19,7 @@ class UserController(
     }
 
     @PostMapping
-    fun addUser(@RequestBody user: @Valid UserDTO): ResponseEntity<UserDTO?> {
+    fun addUser(@Valid @RequestBody user: UserDTO): ResponseEntity<UserDTO?> {
         userService.insert(user)
         val uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{cpf}").buildAndExpand(user.cpf).toUri()
         return ResponseEntity.created(uri).body(user)

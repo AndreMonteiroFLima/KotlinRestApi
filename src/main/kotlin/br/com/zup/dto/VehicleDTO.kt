@@ -8,9 +8,9 @@ import jakarta.validation.constraints.NotBlank
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @VehicleValidData
 data class VehicleDTO (
-    @NotBlank
+    @field:NotBlank
     var brand: String,
-    @NotBlank
+    @field:NotBlank
     var model: String,
     @NotBlank
     var yearAndFuel: String,

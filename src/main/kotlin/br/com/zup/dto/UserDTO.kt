@@ -12,13 +12,13 @@ import java.util.*
 
 @UserValidData
 class UserDTO (
-    @NotBlank
+    @field:NotBlank
     @CPF(message = "invalid CPF")
     var cpf: String,
     @NotBlank
     var name: String,
     @Email(message = "invalid Email")
-    @NotBlank
+    @field:NotBlank
     var email: String,
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     var birthDate: Date,

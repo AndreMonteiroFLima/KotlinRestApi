@@ -22,12 +22,14 @@ class UserService(
         user.vehicles.forEach {
             vehicles.add(VehicleDTO.fromEntity(it))
         }
-        vehicles.forEach(Consumer { vehicle: VehicleDTO ->
-            vehicle.rotKey = vehicle.yearAndFuel.substring(3, 4).toInt()
-            val obj = feignService.getInformations(vehicle)
-            vehicle.price = obj.value
-            vehicle.isRotation = feignService.tryRotation()
-        })
+        vehicles.forEach(
+            Consumer { vehicle: VehicleDTO ->
+                vehicle.rotKey = vehicle.yearAndFuel.substring(3, 4).toInt()
+                val obj = feignService.getInformations(vehicle)
+                vehicle.price = obj.value
+                vehicle.isRotation = feignService.tryRotation()
+            }
+        )
         return UserDTO.fromEntity(user, vehicles)
     }
 
