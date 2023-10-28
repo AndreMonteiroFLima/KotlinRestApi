@@ -32,7 +32,8 @@ curl --location --request POST '{hackerrank-session-url}/users/' \ --header 'Con
 
 ### Get User 
 
-```curl --location --request GET '{hackerrank-session-url}/users/05960712997' Post Vehicle curl --location --request POST '{hackerrank-session-url}/vehicles/05960712997' \ --header 'Content-Type: application/json' \ --data-raw '{ "id": 2, "brand": "7", "model": "8819", "yearAndfuel":"2021-1" }' 
+```
+curl --location --request GET '{hackerrank-session-url}/users/05960712997' Post Vehicle curl --location --request POST '{hackerrank-session-url}/vehicles/05960712997' \ --header 'Content-Type: application/json' \ --data-raw '{ "id": 2, "brand": "7", "model": "8819", "yearAndfuel":"2021-1" }' 
 ```
 
 ### Get Vehicle 
