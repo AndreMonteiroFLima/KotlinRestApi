@@ -2,7 +2,7 @@
 
 ## Enunciado
 
-Você está avaliando uma API REST que controla veículos de usuários. A API deve ser composta de pelo menos 3 endpoints: 
+Você está avaliando uma API REST que controla veículos de usuários. A API deve ser composta de **pelo menos** 3 endpoints: 
 
 - o cadastro do usuário
 - o cadastro de veículo
@@ -24,7 +24,7 @@ Segue CURL's embaixo, caso você use outra ferramenta.
 
 CURL's 
 
-### Post User 
+### Add User 
 
 ```
 curl --location --request POST '{hackerrank-session-url}/users/' \ --header 'Content-Type: application/json' \ --data-raw '{ "name": "Joao Batista Cordeiro Neto", "cpf": "05960712997", "email": "netowww@gmail.com", "birthdate": "1993-12-03" }' 
@@ -33,7 +33,13 @@ curl --location --request POST '{hackerrank-session-url}/users/' \ --header 'Con
 ### Get User 
 
 ```
-curl --location --request GET '{hackerrank-session-url}/users/05960712997' Post Vehicle curl --location --request POST '{hackerrank-session-url}/vehicles/05960712997' \ --header 'Content-Type: application/json' \ --data-raw '{ "id": 2, "brand": "7", "model": "8819", "yearAndfuel":"2021-1" }' 
+curl --location --request GET '{hackerrank-session-url}/users/05960712997'
+```
+
+### Add Vehicle 
+
+```
+curl --location --request POST '{hackerrank-session-url}/vehicles/05960712997' \ --header 'Content-Type: application/json' \ --data-raw '{ "id": 2, "brand": "7", "model": "8819", "yearAndfuel":"2021-1" }' 
 ```
 
 ### Get Vehicle 
