@@ -18,7 +18,7 @@ class VehicleController(
     }
 
     @PostMapping(value = ["/{cpf}"])
-    fun addVehicle(@RequestBody vehicle: @Valid VehicleDTO, @PathVariable cpf: String): ResponseEntity<VehicleDTO?> {
+    fun addVehicle(@Valid @RequestBody vehicle: VehicleDTO, @PathVariable cpf: String): ResponseEntity<VehicleDTO?> {
         vehicleService.insert(cpf, vehicle)
         return ResponseEntity.status(HttpStatus.valueOf(201)).body(vehicle)
     }

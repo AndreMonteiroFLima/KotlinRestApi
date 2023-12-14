@@ -5,6 +5,7 @@ import br.com.zup.entities.Vehicle
 import br.com.zup.repositories.UserRepository
 import br.com.zup.repositories.VehicleRepository
 import br.com.zup.services.exceptions.DataErrorException
+import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -18,6 +19,7 @@ class VehicleService(
     val userRepository: UserRepository,
     val feignService: FeignService
 ) {
+
     @Transactional
     fun insert(cpf: String, dto: VehicleDTO) {
         val user = userRepository.findById(cpf).orElseThrow { DataErrorException("Entity not found! ") }!!
@@ -28,6 +30,7 @@ class VehicleService(
             yearAndFuel = dto.yearAndFuel,
             user = user
         )
+        feignService.getInformations(dto)
         repository.save(vehicle)
     }
 
@@ -44,7 +47,7 @@ class VehicleService(
                 vehicle.brand = obj.brand
                 vehicle.model = obj.model
                 vehicle.price = obj.value
-                vehicle.isRotation = feignService.tryRotation()
+                vehicle.isRotation = feignService.tryRotation(vehicle.rotKey)
             }
         )
         return vehicles

@@ -21,4 +21,5 @@ class Vehicle (
     @ManyToOne
     @JoinColumn(name = "owner_cpf")
     var user: User
+
 )

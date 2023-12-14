@@ -27,7 +27,7 @@ class UserService(
                 vehicle.rotKey = vehicle.yearAndFuel.substring(3, 4).toInt()
                 val obj = feignService.getInformations(vehicle)
                 vehicle.price = obj.value
-                vehicle.isRotation = feignService.tryRotation()
+                vehicle.isRotation = feignService.tryRotation(vehicle.rotKey)
             }
         )
         return UserDTO.fromEntity(user, vehicles)
